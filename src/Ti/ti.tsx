@@ -48,19 +48,19 @@ const Ti: React.FC = () => {
     <div id='consultoria' className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6 md:mx-auto max-w-6xl">
         <ServiceCard
-          image="/it1.jpg"
+          image="/ce.jpg"
           title="Consultoría Estratégica"
           description="Trabajaremos contigo el Plan de Trabajo previamente generado de acuerdo al diagnóstico inicial que realicemos a tu empresa."
           linkTo="/ConsultoriaEstrategica"
         />
         <ServiceCard
-          image="/it2.jpeg"
+          image="/te.jpg"
           title="Talleres Empresariales"
           description="Te capacitaremos y asesoraremos de acuerdo a las estrategías que definamos durante la ejecución de los talleres."
           linkTo="/TalleresEmpresariales" 
         />
         <ServiceCard
-          image="/it3.jpeg"
+          image="/dcp.jpg"
           title="Desarrollo de Capital Humano"
           description="Ejecutaremos las sesiones personalizadas que diseñemos de acuerdo a las necesidades de capacitación de tus líderes y equipo de trabajo"
           linkTo="/DesarolloCapitalHumano" 

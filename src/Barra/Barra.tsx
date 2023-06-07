@@ -5,11 +5,10 @@ import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from '../templates/Logo';
 
-
 const Heros = () => (
   <Background color="bg-gray-100">
     <Section yPadding="py-6">
-      <NavbarTwoColumns logo={<Logo xl />}>
+      <NavbarTwoColumns logo={<Logo xl />} showMenu={true}>
         <li>
           <Link href="/">
             <a>Servicios</a>
@@ -32,7 +31,6 @@ const Heros = () => (
         </li>
       </NavbarTwoColumns>
     </Section>
-   
   </Background>
 );
 
