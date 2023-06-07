@@ -1,18 +1,17 @@
-
 import { Section } from '../layout/Section';
 import OptionCard from '../cards/cards';
 import Ti from '../Ti/ti';
 import Home from '../cardsti/cardsti';
 import ContactCard from '../contactCard/contac';
+import styles from './VerticalFeatures.module.css';
 
 const VerticalFeatures = () => (
   <Section
     title="Principales Servicios"
     description=""
   >
-    <div>
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+    <div className={styles.container}>
+      <div className={styles.optionCardContainer}>
         <OptionCard
           image="/consultoria.jpeg"
           title="Conocimiento Aplicado"
@@ -35,19 +34,10 @@ const VerticalFeatures = () => (
         />
       </div>
     </div>
-    </div>
-        <Ti></Ti>
-      <div>
-        <Home></Home>
-      </div>
-      <div>
-        
-      <ContactCard></ContactCard>
-      </div>
+    <Ti />
+    <Home />
+    <ContactCard />
   </Section>
-
-
-  
 );
 
 export { VerticalFeatures };

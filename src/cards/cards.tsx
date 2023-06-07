@@ -3,8 +3,6 @@ import { useSpring, animated } from 'react-spring';
 import styles from './OptionCard.module.css';
 import { Link } from 'react-scroll';
 
-
-
 interface OptionCardProps {
   image: string;
   title: string;

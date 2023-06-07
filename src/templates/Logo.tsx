@@ -13,7 +13,7 @@ const Logo = (props: ILogoProps) => {
   return (
     <span className={`text-gray-900 inline-flex items-center ${fontStyle}`}>
       <img
-        src="/logoidn2.png" // Reemplaza esta ruta con la ruta o URL del archivo PNG
+        src="/png.png" // Reemplaza esta ruta con la ruta o URL del archivo PNG
         alt="Logo"
         width={size}
         height={size}

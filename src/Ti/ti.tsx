@@ -6,11 +6,10 @@ interface ServiceCardProps {
   image: string;
   title: string;
   description: string;
-  sectionId: string;
   linkTo: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description,  linkTo }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description, linkTo }) => {
   const [hovered, setHovered] = useState(false);
 
   const cardAnimationProps = useSpring({
@@ -46,27 +45,24 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ image, title, description,  l
 
 const Ti: React.FC = () => {
   return (
-    <div id='consultoria' className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div id='consultoria' className="flex justify-center items-center min-h-screen bg-gray-100">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-6 md:mx-auto max-w-6xl">
         <ServiceCard
           image="/it1.jpg"
           title="Consultoría Estratégica"
           description="Trabajaremos contigo el Plan de Trabajo previamente generado de acuerdo al diagnóstico inicial que realicemos a tu empresa."
-          sectionId="consultoria"
           linkTo="/ConsultoriaEstrategica"
         />
         <ServiceCard
           image="/it2.jpeg"
           title="Talleres Empresariales"
           description="Te capacitaremos y asesoraremos de acuerdo a las estrategías que definamos durante la ejecución de los talleres."
-          sectionId="consultoria"
           linkTo="/TalleresEmpresariales" 
         />
         <ServiceCard
           image="/it3.jpeg"
           title="Desarrollo de Capital Humano"
           description="Ejecutaremos las sesiones personalizadas que diseñemos de acuerdo a las necesidades de capacitación de tus líderes y equipo de trabajo"
-          sectionId="consultoria"
           linkTo="/DesarolloCapitalHumano" 
         />
       </div>

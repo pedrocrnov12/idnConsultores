@@ -27,8 +27,8 @@ const ContactCard: React.FC = () => {
   };
 
   return (
-    <animated.div style={fadeInAnimation} className="flex bg-gray-1000 p-8 rounded-lg">
-      <div className="w-1/2">
+    <animated.div style={fadeInAnimation} className="flex flex-col md:flex-row bg-gray-300 p-8 rounded-lg">
+      <div className="w-full md:w-1/2 md:pr-8">
         <h3 className="text-2xl font-semibold mb-4">Contacto</h3>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -105,7 +105,7 @@ const ContactCard: React.FC = () => {
           </div>
         </form>
       </div>
-      <div className="w-1/2 ml-8">
+      <div className="w-full md:w-1/2 mt-8 md:mt-0">
         <h3 className="text-2xl font-semibold mb-4">Información de Contacto</h3>
         <div className="text-gray-600">
           <p>Correo electrónico: info@example.com</p>

@@ -10,8 +10,9 @@ import { Logo } from './Logo';
 
 const Hero = () => {
   const [visible, setVisible] = useState(false);
+  const [showMenu, setShowMenu] = useState(false); // Agregamos el estado para controlar la visibilidad del menú
 
-  // Define the animation properties using useSpring
+  // Define la animación usando useSpring
   const animationProps = useSpring({
     opacity: visible ? 1 : 0,
     transform: visible ? 'translateY(0)' : 'translateY(20px)',
@@ -21,18 +22,47 @@ const Hero = () => {
     },
   });
 
-  // Set visible to true after the component has mounted to trigger the animation
+  // Establece visible en true después de que el componente se haya montado para activar la animación
   React.useEffect(() => {
     setVisible(true);
   }, []);
 
+  // Función para alternar la visibilidad del menú en dispositivos móviles
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <Background color="bg-gray-100">
       <Section yPadding="py-6">
-        <NavbarTwoColumns logo={<Logo xl />}>
+        {/* Agregamos un botón para mostrar/ocultar el menú en dispositivos móviles */}
+        <button
+          className="lg:hidden absolute top-5 right-5 z-10"
+          onClick={toggleMenu}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-6 h-6"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <NavbarTwoColumns logo={<Logo xl />} showMenu={showMenu}>
           <li>
             <Link href="/">
               <a>Servicios</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a>Productos</a>
             </Link>
           </li>
           <li>
@@ -50,6 +80,7 @@ const Hero = () => {
               <a>Contactanos</a>
             </Link>
           </li>
+          
         </NavbarTwoColumns>
       </Section>
 
