@@ -1,10 +1,10 @@
 import React from 'react'
-import { Heros } from '../Barra/Barra'
+import { Hero2 } from '../Barra/Barra'
 import Desarrollo from '../ConocimentoAplicado/DesarolloCapitalHumano'
 export default function lalo() {
   return (
     <div>
-    <Heros></Heros>
+    <Hero2></Hero2>
     <div>
       <Desarrollo></Desarrollo>
     </div>
