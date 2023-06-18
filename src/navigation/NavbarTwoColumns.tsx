@@ -1,58 +1,52 @@
-import { ReactNode } from 'react';
-import Link from 'next/link';
+import React from 'react';
 
-type INavbarProps = {
-  logo: ReactNode;
-  children: ReactNode;
-};
+interface INavbarProps {
+  logo: React.ReactElement;
+  showMenu: boolean;
+  children: React.ReactNode;
+}
 
-const NavbarTwoColumns = (props: INavbarProps) => (
-  <div className="flex flex-wrap justify-between items-center">
-    <div>
-      <Link href="/">
-        <a>{props.logo}</a>
-      </Link>
-    </div>
+const NavbarTwoColumns: React.FC<INavbarProps> = ({ logo, showMenu, children }) => {
+  const handleMouseEnter = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const target = event.currentTarget;
+    target.classList.add('hover:underline');
+  };
 
-    <nav>
-      <ul className="navbar flex items-center font-medium text-xl text-gray-800">
-        {props.children}
-      </ul>
+  const handleMouseLeave = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const target = event.currentTarget;
+    target.classList.remove('hover:underline');
+  };
+
+  return (
+    <nav className="flex justify-between items-center bg-gray-900 py-4 px-6 w-full">
+      <div className="text-white">{logo}</div>
+
+      <div className={`lg:flex ${showMenu ? 'block' : 'hidden'}`}>
+        <ul className="hidden lg:flex items-center space-x-6">
+          {React.Children.map(children, (child, index) => (
+            <li key={index} className="pl-4">
+              {React.cloneElement(child as React.ReactElement, {
+                onMouseEnter: handleMouseEnter,
+                onMouseLeave: handleMouseLeave,
+                className: 'font-bold text-white', // Agregar las clases font-bold y text-white
+              })}
+            </li>
+          ))}
+        </ul>
+        <ul className={`lg:hidden ${showMenu ? 'block' : 'hidden'}`}>
+          {React.Children.map(children, (child, index) => (
+            <li key={index} className="py-2">
+              {React.cloneElement(child as React.ReactElement, {
+                onMouseEnter: handleMouseEnter,
+                onMouseLeave: handleMouseLeave,
+                className: 'font-bold text-white', // Agregar las clases font-bold y text-white
+              })}
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
-
-    <style jsx>
-      {`
-        .navbar :global(li:not(:first-child)) {
-          @apply mt-0;
-        }
-
-        .navbar :global(li:not(:last-child)) {
-          @apply mr-5;
-        }
-
-        /* Add the hover animation */
-        .navbar :global(a:hover) {
-          position: relative;
-        }
-
-        .navbar :global(a:hover::after) {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: -2px;
-          width: 100%;
-          height: 2px;
-          background-color: black;
-          transform: scaleX(0);
-          transition: transform 0.3s ease-in-out;
-        }
-
-        .navbar :global(a:hover::after) {
-          transform: scaleX(1);
-        }
-      `}
-    </style>
-  </div>
-);
+  );
+};
 
 export { NavbarTwoColumns };

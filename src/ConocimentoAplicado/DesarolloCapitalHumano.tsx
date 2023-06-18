@@ -47,7 +47,7 @@ const Desarrollo: React.FC = () => {
 
 Sesiones impartidas por un coach ontológico certificado.
 "
-      image="/ta1.jpg"
+      image="/3.1.- Formación de Líderes.PNG"
       imageAlt="First feature alt text"
       button='Cotizar'
       buttonLink=''
@@ -79,7 +79,7 @@ Sesiones impartidas por un coach ontológico certificado.
       
       Sesiones impartidas por un coach ontológico certificado.
       "
-      image="/ta2.jpg"
+      image="/3.2.- Trabajo en Equipo.PNG"
       imageAlt="Second feature alt text"
       button='Cotizar'
       buttonLink=''
@@ -115,7 +115,7 @@ Sesiones impartidas por un coach ontológico certificado.
       
       Sesiones impartidas por un coach ontológico certificado.
       "
-      image="/ta3.jpg"
+      image="/3.3.- Habilidades Blandas.PNG"
       imageAlt="Third feature alt text"
       button='Cotizar'
       buttonLink=''

@@ -44,11 +44,11 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
           opacity: showContent ? 1 : 2,
         }}
       >
-        <h3 className="text-3xl text-gray-900 font-semibold">{props.title}</h3>
+        <h3 className="text-3xl text-gray-900 font-semibold" style={{ fontFamily:'Bahnschrift SemiBold SemiConden '}}>{props.title}</h3>
         <div ref={ref}>
           <animated.div
             className="font-tight text-lg text-left"
-            style={contentSpringProps}
+            style={{ ...contentSpringProps, fontFamily: 'Bahnschrift Light' }}
           >
             {props.description}
           </animated.div>
