@@ -25,7 +25,7 @@ const Talleres: React.FC = () => {
     <VerticalFeatureRow
       title="Modelo de Negocio"
       description="Esquematizar la forma en que generará utilidades el negocio, suele ser un proceso que nos permite definir aspectos claves del negocio para asegurar que funcione según el plan, sin embargo, en ocasiones la realidad resulta ser muy diferente a lo previsto, esto por lo general se debe a que en un inicio no se validó las necesidades del mercado por lo tanto, el producto o servicio no atiende tal necesidad. Compartiremos contigo el conjunto de herramientas especializadas en la materia, para acompañarte en la Elaboración de tu Modelo de Negocio, que sirva para identificar tu propuesta de valor, saber como hacerla llegar adecuadamente al cliente, diferenciarte de la competencia, hacer rentable y escable el negocio, pero sobre todo, tener una visión clara de como captar, crear y entregar lo que es de valor para el cliente, lo que asegurará el éxito de tu negocio a largo plazo."
-      image="/ta1.jpg"
+      image="/2.1.- Modelo de Negocio.PNG"
       imageAlt="First feature alt text"
       button='Cotizar'
       buttonLink=''
@@ -33,7 +33,7 @@ const Talleres: React.FC = () => {
     <VerticalFeatureRow
       title="Innovación Empresarial"
       description="La capacidad de adaptación de cualquier organización y su rapidez con la que esta lo haga, son factores claves para su éxito, realizar una continua renovación de los productos o servicios, así como de la organización misma, ayuda a mantenerse presente y en constante evolución. Te instruiremos en el Desarrollo de la Estrategia de Innovación que proporcionará cambios organizacionales, productivos y/o tecnológicos en tu empresa con el fin de hacerla competitiva y eficiente."
-      image="/ta2.jpg"
+      image="/2.2.- Innovación Empresarial.PNG"
       imageAlt="Second feature alt text"
       button='Cotizar'
       buttonLink=''
@@ -44,7 +44,7 @@ const Talleres: React.FC = () => {
       Estrategias Digitales de Venta y Comercialización
       La tecnología e innovación empresarial que permiten mejorar los procesos internos de la empresa ya no son suficiente ante un mercado en constante evolución, de manera que aumentar las capacidades digitales en todas las áreas de la empresa sobre todo en el área comercial, implica un cambio de paradigma organizacional ya que significa para la empresa un cambio radical en la forma de operar y brindar valor a sus clientes.
       Te expondremos las nuevas oportunidades de generación de ingresos y te guiaremos en la Definición de la Estrategia Digital de Comercialización para desarrollar tu empresa dentro de un nuevo canal digital."
-      image="/ta3.jpg"
+      image="/2.3.- Estrategias Digitales de Comercialización.PNG"
       imageAlt="Third feature alt text"
       button='Cotizar'
       buttonLink=''
