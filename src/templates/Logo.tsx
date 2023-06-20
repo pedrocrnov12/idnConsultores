@@ -1,4 +1,5 @@
 import { AppConfig } from '../utils/AppConfig';
+import Link from 'next/link';
 
 type ILogoProps = {
   xl?: boolean;
@@ -11,16 +12,18 @@ const Logo = (props: ILogoProps) => {
     : 'font-semibold text-xl';
 
   return (
-    <span className={`text-gray-900 inline-flex items-center ${fontStyle}`}>
-      <img
-        src="/png.png" // Reemplaza esta ruta con la ruta o URL del archivo PNG
-        alt="Logo"
-        width={size}
-        height={size}
-      />
+    <Link href="/">
+      <a className="text-gray-900 inline-flex items-center">
+        <img
+          src="/png.png" // Reemplaza esta ruta con la ruta o URL del archivo PNG
+          alt="Logo"
+          width={size}
+          height={size}
+        />
 
-      {AppConfig.site_name}
-    </span>
+        <span className={fontStyle}>{AppConfig.site_name}</span>
+      </a>
+    </Link>
   );
 };
 

@@ -46,7 +46,7 @@ const Consultoria: React.FC = () => {
       image="/4.2.- Landing Page.PNG"
       imageAlt="Second feature alt text"
       button='Cotizar'
-      buttonLink='paginasWeb'
+      buttonLink='/LandingPage'
     />
      <VerticalFeatureRow
       title="Blog"
@@ -59,7 +59,7 @@ const Consultoria: React.FC = () => {
       image="/4.3.- Blog.PNG"
       imageAlt="Third feature alt text"
       button='Cotizar'
-      buttonLink='paginasWeb'
+      buttonLink='/Blog'
     />
     
   </Section>

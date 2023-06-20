@@ -10,7 +10,7 @@ const Banner = () => (
       title="En este mundo cada vez mas digitalizado."
       subtitle="¿En donde estas tu?."
       button={
-        <Link href="https://creativedesignsguru.com/category/nextjs/">
+        <Link href="/">
           <a>
             <Button>Empieza hoy</Button>
           </a>

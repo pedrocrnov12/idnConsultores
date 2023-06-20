@@ -1,16 +1,16 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
-function ContactForm() {
-  const [state, handleSubmit] = useForm("myyarnqo");
+function ContactLandingForm() {
+  const [state, handleSubmit] = useForm("mbjenbgg");
 
   if (state.succeeded) {
-    return <p className="text-1xl font-sans text-center mb-8">¡Gracias Por Tu Mensaje!😊</p>;
+    return <p className="text-2xl font-sans text-center mb-8">Pronto recibirás un mensaje en tu correo electrónico</p>;
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-gray-200 rounded-lg p-4">
-      <label htmlFor="firstName" className="block mb-2">
+    <form onSubmit={handleSubmit} className="bg-gray-300 rounded-lg p-4">
+      <label htmlFor="firstName" className="block mb-2 text-lg font-semibold">
         Nombres:
       </label>
       <input
@@ -18,6 +18,7 @@ function ContactForm() {
         type="text"
         name="firstName"
         className="w-full px-4 py-2 rounded-lg border-gray-300 focus:outline-none focus:ring focus:ring-blue-200"
+        placeholder="Escriba su nombre completo por favor."
         required
       />
       <ValidationError
@@ -27,13 +28,14 @@ function ContactForm() {
         className="text-red-500"
       />
 
-      <label htmlFor="lastName" className="block mt-4 mb-2">
+      <label htmlFor="lastName" className="block mt-4 mb-2 text-lg font-semibold">
         Apellidos:
       </label>
       <input
         id="lastName"
         type="text"
         name="lastName"
+        placeholder="Escriba sus apellidos por favor."
         className="w-full px-4 py-2 rounded-lg border-gray-300 focus:outline-none focus:ring focus:ring-blue-200"
         required
       />
@@ -44,14 +46,15 @@ function ContactForm() {
         className="text-red-500"
       />
 
-      <label htmlFor="email" className="block mt-4 mb-2">
-        Correo Electronico
+      <label htmlFor="email" className="block mt-4 mb-2 text-lg font-semibold">
+        Correo Electrónico
       </label>
       <input
         id="email"
         type="email"
         name="email"
         className="w-full px-4 py-2 rounded-lg border-gray-300 focus:outline-none focus:ring focus:ring-blue-200"
+        placeholder="Por este medio lo contactaremos."
         required
       />
       <ValidationError
@@ -61,14 +64,15 @@ function ContactForm() {
         className="text-red-500"
       />
 
-      <label htmlFor="phone" className="block mt-4 mb-2">
-        Numero De Telefono:
+      <label htmlFor="phone" className="block mt-4 mb-2 text-lg font-semibold">
+        Número de Teléfono:
       </label>
       <input
         id="phone"
         type="tel"
         name="phone"
         className="w-full px-4 py-2 rounded-lg border-gray-300 focus:outline-none focus:ring focus:ring-blue-200"
+        placeholder="Escriba su número de teléfono por favor."
         required
       />
       <ValidationError
@@ -78,15 +82,36 @@ function ContactForm() {
         className="text-red-500"
       />
 
-      <label htmlFor="message" className="block mt-4 mb-2">
+      <label htmlFor="plan" className="block mt-4 mb-2 text-lg font-semibold">
+        Plan:
+      </label>
+      <select
+        id="plan"
+        name="plan"
+        className="w-full px-4 py-2 rounded-lg border-gray-300 focus:outline-none focus:ring focus:ring-blue-200"
+        required
+      >
+        <option value="">Seleccione Landing Page</option>
+        <option value="LandingPage">Landing Page</option>
+      </select>
+      <ValidationError
+        prefix="Plan"
+        field="plan"
+        errors={state.errors}
+        className="text-red-500"
+      />
+
+      <label htmlFor="message" className="block mt-4 mb-2 text-lg font-semibold">
         Mensaje:
       </label>
       <textarea
         id="message"
         name="message"
-        className="w-full px-4 py-2 rounded-lg border-gray-300 focus:outline-none focus:ring focus:ring-blue-200 h-32"
+        rows={4}
+        placeholder="Escriba alguna duda o inquietud."
+        className="w-full px-4 py-2 rounded-lg border-gray-300 focus:outline-none focus:ring focus:ring-blue-200"
         required
-      />
+      ></textarea>
       <ValidationError
         prefix="Message"
         field="message"
@@ -111,15 +136,15 @@ function ContactForm() {
   );
 }
 
-function App() {
+function LandingPageF() {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="max-w-md">
-        <h1 className="text-3xl font-sans text-center mb-8">Dínos en que podemos ayudarte 😊</h1>
-        <ContactForm />
+        <h1 className="text-3xl font-bold text-center mb-8">Complete los datos y escriba su mensaje</h1>
+        <ContactLandingForm />
       </div>
     </div>
   );
 }
 
-export default App;
+export default LandingPageF;

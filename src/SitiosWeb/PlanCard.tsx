@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 export interface Plan {
   name: string;
@@ -7,6 +8,16 @@ export interface Plan {
 }
 
 const PlanCard: React.FC<{ plan: Plan }> = ({ plan }) => {
+  const router = useRouter();
+
+  const handleChoosePlan = () => {
+    // Aquí puedes definir la ruta a la que deseas redirigir
+    const route = '/ContacWebSites';
+
+    // Redirigir a la página
+    router.push(route);
+  };
+
   return (
     <div className="bg-gray-200 rounded-lg shadow-lg p-2 text-center flex flex-col items-center justify-center h-full">
       <h2 className="text-4xl font-semibold mb-4">{plan.name}</h2>
@@ -33,7 +44,10 @@ const PlanCard: React.FC<{ plan: Plan }> = ({ plan }) => {
           </li>
         ))}
       </ul>
-      <button className="bg-blue-500 text-white rounded-md px-8 py-4 mt-8 hover:bg-blue-600">
+      <button
+        className="bg-blue-500 text-white rounded-md px-8 py-4 mt-8 hover:bg-blue-600"
+        onClick={handleChoosePlan}
+      >
         Elegir plan
       </button>
     </div>

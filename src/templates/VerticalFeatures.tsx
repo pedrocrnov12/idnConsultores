@@ -13,12 +13,12 @@ const VerticalFeatures = () => (
     <div className={styles.container}>
       <div className={styles.optionCardContainer}>
         <OptionCard
-          image="/consultoria.jpeg"
+          image="/it2.3.jpeg"
           title="Conocimiento Aplicado"
           sectionId='consultoria'
         />
         <OptionCard
-          image="/ti.jpg"
+          image="/it2.2.jpeg"
           title="Tecnologias De La Informacion"
           sectionId='tic'
         />
